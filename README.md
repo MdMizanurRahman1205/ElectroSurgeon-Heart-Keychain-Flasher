@@ -40,6 +40,9 @@ Your pasted sketch currently defines:
 
 But the header comments say Data D5 and Button D4. The `#define` lines are what the firmware actually uses. Make the code and physical wiring agree before exporting the binary.
 
+👨‍🔧 Built by
+Electro_Surgeon | Md Mizanur Rahman
+
 🔧 Electronics | Embedded | IoT | DIY Projects | Automation
 
 🌐 Explore All Our Links: 
