@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100817">
+<title>ElectroSurgeon | Heart Keychain Flasher</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+:root{--pink:#ff4f9a;--violet:#a855f7;--bg:#0c0712;--muted:#b9a9c6;--line:#ffffff18}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#35133b 0,transparent 35%),linear-gradient(145deg,#0b0711,#171024 55%,#090d19);color:#fff;font-family:Inter,Arial,sans-serif;min-height:100vh}
+.wrap{width:min(960px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.brand{font-size:13px;font-weight:800;letter-spacing:3px;color:#ff8cbd}
+.navtag{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:8px 12px;border-radius:30px}
+.hero{text-align:center;padding:66px 0 38px}
+.eyebrow{color:#ff8cbd;font-size:11px;letter-spacing:4px;font-weight:800}
+h1{font-size:clamp(34px,7vw,62px);line-height:1.03;margin:16px 0 12px;letter-spacing:-2px}
+h1 span{background:linear-gradient(90deg,#ff70ad,#bd79ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7;font-size:15px}
+.heart-stage{height:130px;display:grid;place-items:center}
+.heart{font-size:76px;filter:drop-shadow(0 0 10px #ff3d91) drop-shadow(0 0 28px #a855f7);animation:beat 1.2s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.panel{background:linear-gradient(145deg,#ffffff12,#ffffff06);border:1px solid var(--line);border-radius:22px;padding:26px;margin:18px 0;box-shadow:0 18px 60px #0003}
+.panel h2{font-size:21px;margin:0 0 8px}
+.muted{color:var(--muted);font-size:13px;line-height:1.7}
+.flash-panel{text-align:center;border-color:#ff5ca544}
+.flash-icon{font-size:28px;margin-bottom:8px}
+esp-web-install-button{display:inline-block;margin:20px auto 8px;--esp-tools-button-color:linear-gradient(90deg,#ff3d91,#a64dff);--esp-tools-button-text-color:white;--esp-tools-button-border-radius:14px}
+esp-web-install-button::part(button){font-weight:800}
+esp-web-install-button:not([install-unsupported]){color:white}
+esp-web-install-button[install-unsupported]::after{content:"Use Chrome or Edge on a computer, and open this page over HTTPS.";display:block;color:#ffc1dc;font-size:12px;margin-top:12px}
+.notice{font-size:12px;color:#d8c7e2;line-height:1.6;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature{background:#ffffff09;border:1px solid var(--line);border-radius:16px;padding:17px}
+.feature b{display:block;margin:8px 0 5px;font-size:14px}
+.feature p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+.spec{padding:13px;border-radius:12px;background:#08061066;border:1px solid var(--line)}
+.spec small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.spec strong{display:block;margin-top:5px;font-size:14px}
+.steps{padding-left:20px;color:var(--muted);font-size:13px;line-height:1.9}
+.steps strong{color:#fff}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.links a{color:#ff9bc6;text-decoration:none;border:1px solid #ff78b533;padding:9px 12px;border-radius:10px;font-size:12px}
+footer{text-align:center;color:#8e809a;font-size:11px;padding:25px 0 38px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.panel{padding:20px}.specs{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">ELECTROSURGEON</div><div class="navtag">DIY FIRMWARE INSTALLER</div></nav>
+
+<header class="hero">
+  <div class="eyebrow">THINK · BUILD · INNOVATE</div>
+  <div class="heart-stage"><div class="heart" aria-label="Glowing heart">♥</div></div>
+  <h1>12-LED <span>Heart Keychain</span></h1>
+  <p class="lead">Bring your heart-shaped WS2812B keychain to life. Install the ElectroSurgeon firmware directly from your browser — no Arduino IDE needed for the flashing step.</p>
+</header>
+
+<section class="panel flash-panel" id="flash">
+  <div class="flash-icon">⚡</div>
+  <h2>Flash Your Keychain</h2>
+  <p class="muted">Connect your ESP8266 D1 Mini to your computer with a data-capable USB cable, then start the installer.</p>
+  <esp-web-install-button manifest="manifest.json">
+    <span slot="unsupported">Your browser does not support Web Serial. Open this page in desktop Chrome or Microsoft Edge over HTTPS.</span>
+  </esp-web-install-button>
+  <div class="notice">Keep the keychain disconnected from external LED power while flashing. Select the USB serial port when your browser asks.</div>
+</section>
+
+<section class="panel">
+  <h2>Project Features</h2>
+  <p class="muted">A compact heart-shaped lighting project with wireless control and custom animations.</p>
+  <div class="grid">
+    <div class="feature"><div>🌈</div><b>40 Lighting Modes</b><p>Rainbow, scanner, fire, heartbeat, romantic effects and more.</p></div>
+    <div class="feature"><div>📶</div><b>Offline Wi-Fi Dashboard</b><p>Connect to the keychain hotspot and control it from your phone.</p></div>
+    <div class="feature"><div>🎨</div><b>Live Customization</b><p>Adjust brightness, animation speed, color and power.</p></div>
+  </div>
+  <div class="specs">
+    <div class="spec"><small>Controller</small><strong>ESP8266 D1 Mini</strong></div>
+    <div class="spec"><small>LEDs</small><strong>12 × WS2812B</strong></div>
+    <div class="spec"><small>Wi-Fi AP</small><strong>ElectroSurgeon_KEYChain</strong></div>
+    <div class="spec"><small>Dashboard</small><strong>192.168.4.1</strong></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>How to Install</h2>
+  <ol class="steps">
+    <li>Use a desktop or laptop with the latest <strong>Chrome or Microsoft Edge</strong>.</li>
+    <li>Open this page from its <strong>HTTPS GitHub Pages</strong> address.</li>
+    <li>Connect the ESP8266 D1 Mini using a USB data cable.</li>
+    <li>Click <strong>Install</strong>, choose the ESP8266 serial port and confirm.</li>
+    <li>Wait for the process to finish before unplugging the board.</li>
+    <li>After reboot, connect your phone to <strong>ElectroSurgeon_KEYChain</strong> (password: <strong>Electro123</strong>), then visit <strong>http://192.168.4.1</strong>.</li>
+  </ol>
+  <p class="notice">Web flashing requires a secure HTTPS page and a browser with Web Serial support. iPhone/iPad browsers are not supported for this flashing workflow.</p>
+</section>
+
+<section class="panel">
+  <h2>Firmware & Source</h2>
+  <p class="muted">The installer reads the firmware binary listed in <code>manifest.json</code>. The source sketch is not itself a flashable binary. Compile the sketch for the ESP8266 D1 Mini and place the exported binary at the exact path shown in the manifest.</p>
+  <div class="links">
+    <a href="manifest.json">View firmware manifest</a>
+    <a href="https://github.com/esphome/esp-web-tools">ESP Web Tools</a>
+    <a href="https://github.com/">GitHub</a>
+  </div>
+</section>
+
+<footer>Designed & built by <strong>ElectroSurgeon</strong><br>Creator · Md Mizanur Rahman</footer>
+</div>
+</body>
+</html>
