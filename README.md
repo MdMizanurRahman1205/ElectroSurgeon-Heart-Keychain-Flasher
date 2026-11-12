@@ -39,3 +39,17 @@ Your pasted sketch currently defines:
 `BUTTON_PIN D5`
 
 But the header comments say Data D5 and Button D4. The `#define` lines are what the firmware actually uses. Make the code and physical wiring agree before exporting the binary.
+
+🔧 Electronics | Embedded | IoT | DIY Projects | Automation
+
+🌐 Explore All Our Links: 
+🔗 Website: https://sites.google.com/view/electrosurgeon 
+▶️ YouTube: https://www.youtube.com/@electrosurgeon 
+📸 Instagram: https://www.instagram.com/electro_surgeon/ 
+💼 LinkedIn: https://www.linkedin.com/company/electrosurgeon 
+🌐 Hackster: https://www.hackster.io/electrosurgeon12
+🗂️ Github: https://github.com/MdMizanurRahman1205
+📡 Patreon: https://www.patreon.com/cw/electrosurgeon
+
+If you found this project useful, LIKE 👍 | COMMENT 💬 | SHARE ↗️ | SUBSCRIBE 🔔
+
