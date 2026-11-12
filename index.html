@@ -45,8 +45,16 @@ esp-web-install-button[install-unsupported]::after{content:"Use Chrome or Edge o
 .steps strong{color:#fff}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
 .links a{color:#ff9bc6;text-decoration:none;border:1px solid #ff78b533;padding:9px 12px;border-radius:10px;font-size:12px}
+.section{margin:22px 0}
+.section-head{margin-bottom:15px}
+.section-head h2{font-size:22px;margin:0 0 7px}
+.section-head p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.social{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.social a{display:flex;align-items:center;gap:9px;padding:13px 14px;border-radius:13px;border:1px solid var(--line);background:#ffffff09;color:#fff;text-decoration:none;font-size:13px;transition:transform .2s,border-color .2s,background .2s}
+.social a:hover{transform:translateY(-2px);border-color:#ff78b566;background:#ff4f9a12}
+.social a span{font-size:17px}
 footer{text-align:center;color:#8e809a;font-size:11px;padding:25px 0 38px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.panel{padding:20px}.specs{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.panel{padding:20px}.specs{grid-template-columns:1fr 1fr}.social{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -94,7 +102,7 @@ footer{text-align:center;color:#8e809a;font-size:11px;padding:25px 0 38px}
     <li>Connect the ESP8266 D1 Mini using a USB data cable.</li>
     <li>Click <strong>Install</strong>, choose the ESP8266 serial port and confirm.</li>
     <li>Wait for the process to finish before unplugging the board.</li>
-    <li>After reboot, connect your phone to <strong>ElectroSurgeon_KEYChain</strong> (password: <strong>Electro123</strong>), then visit <strong>https://192.168.4.1</strong>.</li>
+    <li>After reboot, connect your phone to <strong>ElectroSurgeon_KEYChain</strong> (password: <strong>Electro123</strong>), then visit <strong>http://192.168.4.1</strong>.</li>
   </ol>
   <p class="notice">Web flashing requires a secure HTTPS page and a browser with Web Serial support. iPhone/iPad browsers are not supported for this flashing workflow.</p>
 </section>
@@ -108,21 +116,22 @@ footer{text-align:center;color:#8e809a;font-size:11px;padding:25px 0 38px}
     <a href="https://github.com/">GitHub</a>
   </div>
 </section>
- <section id="community" class="section">
-      <div class="section-head"><div><h2>Follow the build.</h2><p>More projects, tutorials, and behind-the-scenes from ElectroSurgeon.</p></div></div>
-      <div class="social">
-        <a href="https://www.youtube.com/@electrosurgeon" target="_blank" rel="noopener noreferrer"><span>▶️</span>YouTube</a>
-        <a href="https://www.instagram.com/electro_surgeon/" target="_blank" rel="noopener noreferrer"><span>📸</span>Instagram</a>
-        <a href="https://www.patreon.com/cw/electrosurgeon" target="_blank" rel="noopener noreferrer"><span>📡</span>Patreon</a>
-        <a href="https://www.linkedin.com/in/md-mizanur-rahman-0990bb322/" target="_blank" rel="noopener noreferrer"><span>💼</span>LinkedIn</a>
-        <a href="https://github.com/MdMizanurRahman1205" target="_blank" rel="noopener noreferrer"><span>🗂️</span>GitHub</a>
-        <a href="https://hackster.io/electrosurgeon12" target="_blank" rel="noopener noreferrer"><span>⚙</span>Hackster</a>
-        <a href="https://sites.google.com/view/electrosurgeon" target="_blank" rel="noopener noreferrer"><span>🌐</span>Website</a>
-        
-      
-        
-      </div>
-    </section>
+
+<section id="community" class="section">
+  <div class="section-head">
+    <h2>Follow the build.</h2>
+    <p>More projects, tutorials, and behind-the-scenes from ElectroSurgeon.</p>
+  </div>
+  <div class="social">
+    <a href="https://www.youtube.com/@electrosurgeon" target="_blank" rel="noopener noreferrer"><span>▶️</span>YouTube</a>
+    <a href="https://www.instagram.com/electro_surgeon/" target="_blank" rel="noopener noreferrer"><span>📸</span>Instagram</a>
+    <a href="https://www.patreon.com/cw/electrosurgeon" target="_blank" rel="noopener noreferrer"><span>📡</span>Patreon</a>
+    <a href="https://www.linkedin.com/in/md-mizanur-rahman-0990bb322/" target="_blank" rel="noopener noreferrer"><span>💼</span>LinkedIn</a>
+    <a href="https://github.com/MdMizanurRahman1205" target="_blank" rel="noopener noreferrer"><span>🗂️</span>GitHub</a>
+    <a href="https://hackster.io/electrosurgeon12" target="_blank" rel="noopener noreferrer"><span>⚙</span>Hackster</a>
+    <a href="https://sites.google.com/view/electrosurgeon" target="_blank" rel="noopener noreferrer"><span>🌐</span>Website</a>
+  </div>
+</section>
 <footer>Designed & built by <strong>ElectroSurgeon</strong><br>Creator · Md Mizanur Rahman</footer>
 </div>
 </body>
